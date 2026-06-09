@@ -2,9 +2,10 @@ package main
 
 import (
 	"fmt"
-	"mcserverkit/core"
 	"os"
 	"strings"
+
+	"mcserverkit.github.io/core"
 )
 
 func main() {
