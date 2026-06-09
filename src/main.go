@@ -39,14 +39,24 @@ func main() {
 			os.Exit(1)
 		}
 
-		core.Install(subject)
+		err := core.Install(subject)
+		if err != nil {
+			fmt.Println("Error installing:", err)
+			os.Exit(1)
+		}
+		os.Exit(0)
 	case "create":
 		if subject == "" {
 			fmt.Println("Name needed to create server")
 			os.Exit(1)
 		}
 
-		core.Create(subject)
+		err := core.Create(subject)
+		if err != nil {
+			fmt.Println("Error creating server:", err)
+			os.Exit(0)
+		}
+		os.Exit(0)
 	case "start":
 		if subject == "" {
 			fmt.Println("Name needed to start server")
