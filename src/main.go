@@ -5,7 +5,7 @@ import (
 	"os"
 	"strings"
 
-	"mcserverkit.github.io/core"
+	"mcserverkit.github.io"
 )
 
 func main() {
@@ -39,7 +39,7 @@ func main() {
 			os.Exit(1)
 		}
 
-		err := core.Install(subject)
+		err := mcserverkit.Install(subject)
 		if err != nil {
 			fmt.Println("Error installing:", err)
 			os.Exit(1)
@@ -51,7 +51,7 @@ func main() {
 			os.Exit(1)
 		}
 
-		err := core.Create(subject)
+		err := mcserverkit.Create(subject)
 		if err != nil {
 			fmt.Println("Error creating server:", err)
 			os.Exit(0)
@@ -63,7 +63,7 @@ func main() {
 			os.Exit(1)
 		}
 
-		core.Start(subject, flags["--memory"])
+		mcserverkit.Start(subject, flags["--memory"])
 	default:
 		fmt.Println("Unknown command:", command)
 		os.Exit(1)
