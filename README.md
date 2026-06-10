@@ -4,9 +4,10 @@
 
 Install the Minecraft version the server should run on.
 
-`create <name>`
+`create <name> [flags]`
 
-Create the server folder and sign eula.txt automatically.
+Creates the server folder and signs eula.txt.
+- `--eula` Bool, set to true if you have read and agreed to [Minecraft's EULA](https://www.minecraft.net/en-us/eula)
 
 `start <name> [flags]`
 
