@@ -39,3 +39,6 @@ else
   echo "Windows not yet supported"
   exit 1
 fi
+
+echo "Installation complete"
+exit 0
