@@ -27,5 +27,7 @@ else
   exit 1
 fi
 
-url="https://github.com/mcserverkit/cli/releases/latest/download/mcserverkit.$os-$arch.zip"
+filename="mcserverkit.$os-$arch.zip"
+url="https://github.com/mcserverkit/cli/releases/latest/download/mcserverkit.$filename"
 
+curl -L "$url" -o $filename
