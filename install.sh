@@ -20,9 +20,9 @@ fi
 ARCH=$(uname -m)
 if [[ "$ARCH" == x86_64* ]]; then
   arch="x86_64"
-elif [[ "$ARCH" == i*86 ]]; then
-  echo "32-bit not supported"
-  exit 1
 elif  [[ "$ARCH" == arm* ]]; then
   arch="arm64"
+else
+  echo "$ARCH not supported"
+  exit 1
 fi
