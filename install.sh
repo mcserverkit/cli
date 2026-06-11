@@ -8,6 +8,12 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 echo "You're on Linux"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
 echo "You're on macOS"
+elif [[ "$OSTYPE" == "cygwin" ]]; then
+echo "You're on Windows"
+elif [[ "$OSTYPE" == "msys" ]]; then
+echo "You're on Windows"
+elif [[ "$OSTYPE" == "win32" ]]; then
+echo "You're on Windows"
 else
 echo ""
 fi
