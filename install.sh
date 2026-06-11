@@ -33,7 +33,7 @@ url="https://github.com/mcserverkit/cli/releases/latest/download/$filename"
 if [[ $os == "linux" || $os == "macos" ]]; then
   curl -L "$url" -o $filename
   unzip $filename
-  mv mcserverkit /usr/local/bin
+  mv mcserver /usr/local/bin
 else
   echo "Windows not yet supported"
   exit 1
