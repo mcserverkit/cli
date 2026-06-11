@@ -28,6 +28,6 @@ else
 fi
 
 filename="mcserverkit.$os-$arch.zip"
-url="https://github.com/mcserverkit/cli/releases/latest/download/mcserverkit.$filename"
+url="https://github.com/mcserverkit/cli/releases/latest/download/$filename"
 
 curl -L "$url" -o $filename
