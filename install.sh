@@ -11,7 +11,7 @@ echo "You're on macOS"
 elif [[ "$OSTYPE" == "cygwin" || "$OSTYPE" == "msys" || "$OSTYPE" == "win32" ]]; then
 echo "You're on Windows"
 else
-echo ""
+echo "$OSTYPE not supported"
 fi
 
 # https://askubuntu.com/questions/803596/cpu-architecture-scanning-using-bash
