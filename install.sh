@@ -26,3 +26,6 @@ else
   echo "$ARCH not supported"
   exit 1
 fi
+
+url="https://github.com/mcserverkit/cli/releases/latest/download/mcserverkit.$os-$arch.zip"
+
