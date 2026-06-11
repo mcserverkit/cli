@@ -5,11 +5,11 @@ echo "Installing..."
 # https://stackoverflow.com/questions/394230/how-to-detect-the-os-from-a-bash-script
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-echo "You're on Linux"
+os="linux"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-echo "You're on macOS"
+os="macos"
 elif [[ "$OSTYPE" == "cygwin" || "$OSTYPE" == "msys" || "$OSTYPE" == "win32" ]]; then
-echo "You're on Windows"
+os="windows"
 else
 echo "$OSTYPE not supported"
 fi
