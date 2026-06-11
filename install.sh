@@ -12,3 +12,13 @@ else
 echo ""
 fi
 
+# https://askubuntu.com/questions/803596/cpu-architecture-scanning-using-bash
+
+ARCH=$(uname -m)
+if [[ "$ARCH" == x86_64* ]]; then
+  echo "X64 Architecture"
+elif [[ "$ARCH" == i*86 ]]; then
+  echo "X32 Architecture"
+elif  [[ "$ARCH" == arm* ]]; then
+  echo "ARM Architecture"
+fi
