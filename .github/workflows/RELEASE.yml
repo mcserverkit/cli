@@ -1,0 +1,39 @@
+name: release
+on:
+  release:
+    types: [published]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        include:
+          - goos: linux
+            goarch: amd64
+            output: mcserverkit-linux-x64
+          - goos: windows
+            goarch: amd64
+            output: mcserverkit-windows-x64.exe
+          - goos: darwin
+            goarch: amd64
+            output: mcserverkit-macos-x64
+          - goos: darwin
+            goarch: arm64
+            output: mcserverkit-macos-arm64
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+      - env:
+          GOOS: ${{ matrix.goos }}
+          GOARCH: ${{ matrix.goarch }}
+        run: |
+          mkdir -p dist
+          go build -o dist/${{ matrix.output }} ./src
+      - name: upload
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release upload "${{ github.event.release.tag_name }}" dist/${{ matrix.output }}
