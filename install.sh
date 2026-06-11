@@ -34,6 +34,7 @@ if [[ $os == "linux" || $os == "macos" ]]; then
   curl -L "$url" -o $filename
   unzip $filename
   mv mcserver /usr/local/bin
+  rm $filename
 else
   echo "Windows not yet supported"
   exit 1
