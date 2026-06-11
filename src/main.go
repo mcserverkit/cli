@@ -17,6 +17,7 @@ func main() {
 	arguments := os.Args[2:]
 	flags := map[string]string{
 		"--memory": "",
+		"--eula":   "",
 	}
 
 	for i, arg := range arguments {
@@ -51,7 +52,13 @@ func main() {
 			os.Exit(1)
 		}
 
-		err := mcserverkit.Create(subject)
+		eula := flags["--eula"] == "true"
+		if !eula {
+			fmt.Println("You must agree to Minecraft's EULA")
+			os.Exit(1)
+		}
+
+		err := mcserverkit.Create(subject, eula)
 		if err != nil {
 			fmt.Println("Error creating server:", err)
 			os.Exit(0)
