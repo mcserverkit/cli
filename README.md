@@ -1,3 +1,11 @@
+## Installing
+
+macOS/Linux
+
+```bash
+/bin/sh -c "$(curl -fsSL https://raw.githubusercontent.com/mcserverkit/cli/refs/heads/main/install.sh)"
+```
+
 ## Usage
 
 `install <version>`
