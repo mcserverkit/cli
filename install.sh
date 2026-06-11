@@ -19,9 +19,10 @@ fi
 
 ARCH=$(uname -m)
 if [[ "$ARCH" == x86_64* ]]; then
-  echo "X64 Architecture"
+  arch="x86_64"
 elif [[ "$ARCH" == i*86 ]]; then
-  echo "X32 Architecture"
+  echo "32-bit not supported"
+  exit 1
 elif  [[ "$ARCH" == arm* ]]; then
-  echo "ARM Architecture"
+  arch="arm64"
 fi
