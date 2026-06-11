@@ -34,9 +34,7 @@ jobs:
       - env:
           GOOS: ${{ matrix.goos }}
           GOARCH: ${{ matrix.goarch }}
-        run: |
-          mkdir -p dist
-          go build -o dist/${{ matrix.output }} ./src
+        run: go build -o ${{ matrix.output }} ./src
       - name: upload
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
