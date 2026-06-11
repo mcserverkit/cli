@@ -5,14 +5,14 @@ echo "Installing..."
 # https://stackoverflow.com/questions/394230/how-to-detect-the-os-from-a-bash-script
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-os="linux"
+  os="linux"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-os="macos"
+  os="macos"
 elif [[ "$OSTYPE" == "cygwin" || "$OSTYPE" == "msys" || "$OSTYPE" == "win32" ]]; then
-os="windows"
+  os="windows"
 else
-echo "$OSTYPE not supported"
-exit 1
+  echo "$OSTYPE not supported"
+  exit 1
 fi
 
 # https://askubuntu.com/questions/803596/cpu-architecture-scanning-using-bash
