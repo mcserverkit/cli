@@ -30,6 +30,11 @@ fi
 filename="mcserverkit.$os-$arch.zip"
 url="https://github.com/mcserverkit/cli/releases/latest/download/$filename"
 
-curl -L "$url" -o $filename
-unzip $filename
-mv mcserverkit /usr/local/bin
+if [[ $os == "linux" || $os == "mac" ]]; then
+  curl -L "$url" -o $filename
+  unzip $filename
+  mv mcserverkit /usr/local/bin
+else
+  echo "Windows not yet supported"
+  exit 1
+fi
