@@ -35,7 +35,9 @@ jobs:
           GOOS: ${{ matrix.goos }}
           GOARCH: ${{ matrix.goarch }}
         run: go build -o ${{ matrix.output }} ./src
+      - name: zip
+        run: zip ${{ matrix.zip }} ${{ matrix.output }}
       - name: upload
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh release upload "${{ github.event.release.tag_name }}" ${{ matrix.output }}
+        run: gh release upload "${{ github.event.release.tag_name }}" ${{ matrix.zip }}
