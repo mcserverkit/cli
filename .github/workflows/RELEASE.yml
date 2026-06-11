@@ -13,15 +13,15 @@ jobs:
           - goos: linux
             goarch: amd64
             output: mcserverkit
-            zip: mcserverkit-linux-x64.zip
+            zip: mcserverkit-linux-x86_64.zip
           - goos: windows
             goarch: amd64
             output: mcserverkit.exe
-            zip: mcserverkit-windows-x64.zip
+            zip: mcserverkit-windows-x86_64.zip
           - goos: darwin
             goarch: amd64
             output: mcserverkit
-            zip: mcserverkit-macos-x64.zip
+            zip: mcserverkit-macos-x86_64.zip
           - goos: darwin
             goarch: arm64
             output: mcserverkit
