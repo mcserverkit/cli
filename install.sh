@@ -12,6 +12,7 @@ elif [[ "$OSTYPE" == "cygwin" || "$OSTYPE" == "msys" || "$OSTYPE" == "win32" ]];
 os="windows"
 else
 echo "$OSTYPE not supported"
+exit 1
 fi
 
 # https://askubuntu.com/questions/803596/cpu-architecture-scanning-using-bash
