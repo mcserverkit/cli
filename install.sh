@@ -30,7 +30,7 @@ fi
 filename="mcserverkit.$os-$arch.zip"
 url="https://github.com/mcserverkit/cli/releases/latest/download/$filename"
 
-if [[ $os == "linux" || $os == "mac" ]]; then
+if [[ $os == "linux" || $os == "macos" ]]; then
   curl -L "$url" -o $filename
   unzip $filename
   mv mcserverkit /usr/local/bin
