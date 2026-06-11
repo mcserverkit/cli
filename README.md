@@ -3,7 +3,7 @@
 macOS/Linux
 
 ```bash
-/bin/sh -c "$(curl -fsSL https://raw.githubusercontent.com/mcserverkit/cli/main/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/mcserverkit/cli/main/install.sh)"
 ```
 
 ## Usage
