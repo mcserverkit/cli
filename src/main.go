@@ -45,6 +45,7 @@ func main() {
 			fmt.Println("Error installing:", err)
 			os.Exit(1)
 		}
+		fmt.Println("Installed!")
 		os.Exit(0)
 	case "create":
 		if subject == "" {
@@ -59,6 +60,12 @@ func main() {
 		}
 
 		err := mcserverkit.Create(subject, eula)
+		if err != nil {
+			fmt.Println("Error creating", err)
+			os.Exit(1)
+		}
+		fmt.Println("Done!")
+		os.Exit(0)
 		if err != nil {
 			fmt.Println("Error creating server:", err)
 			os.Exit(0)
