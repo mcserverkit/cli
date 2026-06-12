@@ -10,8 +10,12 @@ Windows
 
 1. Go to releases
 2. Download mcserverkit.windows-x86_64.zip
-3. Unzip
-4. Add `mcserver.exe` to PATH
+3. Extract the zip file
+4. Press `WIN + S` and search for Environment Variables
+5. Press "Edit the system environment variables"
+6. Click "Environment Variables..." in the bottom right
+7. Look for "Path" in user variables and press "Edit..."
+8. Click "New" and paste the executable path
 
 ## Usage
 
