@@ -6,6 +6,13 @@ macOS/Linux
 curl -fsSL https://raw.githubusercontent.com/mcserverkit/cli/main/install.sh | bash
 ```
 
+Windows
+
+1. Go to releases
+2. Download mcserverkit.windows-x86_64.zip
+3. Unzip
+4. Add `mcserver.exe` to PATH
+
 ## Usage
 
 `install <version>`
