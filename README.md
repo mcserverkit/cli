@@ -8,8 +8,7 @@ curl -fsSL https://raw.githubusercontent.com/mcserverkit/cli/main/install.sh | b
 
 Windows
 
-1. Go to releases
-2. Download [mcserverkit.windows-x86_64.zip](https://github.com/mcserverkit/cli/releases/download/v0.1.1/mcserverkit.windows-x86_64.zip)
+1. Download [mcserverkit.windows-x86_64.zip](https://github.com/mcserverkit/cli/releases/download/v0.1.1/mcserverkit.windows-x86_64.zip)
 3. Extract the zip file
 4. Press `WIN + S` and search for Environment Variables
 5. Press "Edit the system environment variables"
