@@ -70,7 +70,11 @@ func main() {
 			os.Exit(1)
 		}
 
-		mcserverkit.Start(subject, flags["--memory"])
+		if flags["--memory"] == "" {
+			mcserverkit.Start(subject)
+		} else {
+			mcserverkit.Start(subject, flags["--memory"])
+		}
 	default:
 		fmt.Println("Unknown command:", command)
 		os.Exit(1)
